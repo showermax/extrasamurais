@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import Navbar from "./Components/Navbar"
+import Main from "./Components/Main"
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const [theme, setTheme] = useState (false)
+
+const toggleDarkMode = (isDark: boolean) => {
+        setTheme(isDark)
+}
+    return (
+        <div className='container'>
+            <Navbar darkMode = {theme} toggleDarkMode = {toggleDarkMode}/>
+            <Main darkMode = {theme} />
+        </div>
   );
 }
 
 export default App;
+
+
+// Пн - Нативка Карина Кришнева, Илья Матюшин
+// Вт - ВЫХОДНОЙ
+// Ср - ВЫХОДНОЙ
+// Чт - СоцСеть Юля Слатвицкая, Костя Сильченко
+// Пт - Тудулист Илья Шулапов, Денис Полуносик
+// Сб – 11:00 Верстка
+// Вс - Тудулист Саня Юдинцев, Рома Шинкаренко (гости Вася, Артем, Володя)
+
