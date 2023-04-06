@@ -2,7 +2,6 @@ import React from 'react';
 
 type MainPorpsType = {
     darkMode: boolean
-
 }
 
 const Main = (props: MainPorpsType) => {

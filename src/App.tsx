@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Navbar from "./Components/Navbar"
 import Main from "./Components/Main"
+import {findAllByDisplayValue} from "@testing-library/react";
 
 
 
@@ -12,12 +13,15 @@ const toggleDarkMode = (isDark: boolean) => {
         setTheme(isDark)
 }
     return (
+
         <div className='container'>
             <Navbar darkMode = {theme} toggleDarkMode = {toggleDarkMode}/>
             <Main darkMode = {theme} />
         </div>
   );
 }
+
+
 
 export default App;
 
